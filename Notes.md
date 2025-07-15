@@ -1,14 +1,11 @@
-Errors:
----------------------------------           
-    Path                                          ERROR                Correct
-======================================================================================================
+## Errors
 
-1. config>initializers>assert.rb-----------> asserts(s)      =======> one extra s is here.
+| Path                                | Error              | Corrected Version                  |
+|-------------------------------------|--------------------|------------------------------------|
+| `config/initializers/assert.rb`     | `asserts(s)`       | One extra `s` → should be `assert` |
+| `Gemfile`                           | `gem "boot-snap"`  | `gem "bootsnap"`                   |
+| `Gemfile` (MySQL gem not added)     | *(Missing)*        | `gem "mysql2"`                     |
+| `config/environments/production.rb` | `confgure`         | `configure`                        |
 
-2. gemfile                      -----------> gem "boot-snap" =======> gem "bootsnap"
-
-3. Added MySQL gem in gem file  ----------->                 =======> gem "mysql2"
-
-4. production.rb                -----------> confgure       =======>  configure
 
 
