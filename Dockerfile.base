@@ -1,0 +1,19 @@
+FROM ruby:3.3.8
+# Install OS dependencies and dev tools    install only asked packages not recommended
+RUN apt-get update -qq && apt-get install -y --no-install-recommends \
+    build-essential \
+    git \
+    curl \
+    libmariadb-dev \
+    libmariadb-dev-compat \
+    libssl-dev \
+    libreadline-dev \
+    zlib1g-dev \
+    libpq-dev \
+    nodejs \
+    yarn \
+    && rm -rf /var/lib/apt/lists/*
+ 
+
+# Set working directory
+WORKDIR /app
